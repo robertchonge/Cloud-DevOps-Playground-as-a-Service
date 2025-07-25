@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom components */
+.btn-neon {
+  @apply px-6 py-3 text-white font-techno rounded-full bg-neon-gradient animate-shine shadow-xl hover:scale-105 transition-all duration-300;
+}
+
+.card-glass {
+  @apply glass p-6 rounded-3xl shadow-lg border border-white/20 backdrop-blur-lg;
+}
+
+.glow-text {
+  @apply text-neon-green font-techno text-lg animate-pulse-glow;
+}
+
+.page-bg {
+  @apply min-h-screen bg-black bg-gradient-to-br from-neon-pink via-neon-blue to-neon-green text-white;
+}
+
+.heading-glow {
+  @apply text-4xl md:text-5xl font-techno text-neon-yellow glow-text text-center mb-6;
+}
+
+/* Animated underline hover */
+.link-underline::after {
+  content: '';
+  display: block;
+  height: 2px;
+  background: currentColor;
+  transition: width 0.3s;
+  width: 0;
+}
+.link-underline:hover::after {
+  width: 100%;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#00ffff, #ff00ff);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
